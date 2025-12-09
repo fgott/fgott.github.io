@@ -13,7 +13,7 @@
         <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
         <guid>https://www.dxx.plus/p/sip/</guid>
-        <description>&lt;p&gt;from:https://www.coder.work/article/6748986&lt;/p&gt;
+        <description>&lt;img src="https://www.dxx.plus/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post sip - 使用 OpenSIPS/Kamailio/OpenSER 进行 RTP 代理" /&gt;&lt;p&gt;from:https://www.coder.work/article/6748986&lt;/p&gt;
 &lt;p&gt;我有一个监听多个 IP 的 OpenSIPS 服务器。
 如果我将调用路由回下一个点，我想确保所有信令和媒体都来自调用最初登陆的 IP(我不希望调用者和被调用者知道彼此的 IP 地址)。&lt;/p&gt;
 &lt;p&gt;我相信我需要像 RTPProxy 这样的东西。&lt;/p&gt;
