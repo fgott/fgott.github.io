@@ -7,60 +7,36 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Tobby</copyright>
-        <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dxx.plus/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Css</title>
-        <link>https://www.dxx.plus/tags/css/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dxx.plus/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Kamailio</title>
+        <link>https://www.dxx.plus/tags/kamailio/</link>
+        <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/tags/css/</guid>
+        <guid>https://www.dxx.plus/tags/kamailio/</guid>
         <description></description>
         </item>
         <item>
-        <title>Html</title>
-        <link>https://www.dxx.plus/tags/html/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        <title>OpenSER</title>
+        <link>https://www.dxx.plus/tags/openser/</link>
+        <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/tags/html/</guid>
+        <guid>https://www.dxx.plus/tags/openser/</guid>
         <description></description>
         </item>
         <item>
-        <title>Markdown</title>
-        <link>https://www.dxx.plus/tags/markdown/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        <title>OpenSIPS</title>
+        <link>https://www.dxx.plus/tags/opensips/</link>
+        <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/tags/markdown/</guid>
+        <guid>https://www.dxx.plus/tags/opensips/</guid>
         <description></description>
         </item>
         <item>
-        <title>Themes</title>
-        <link>https://www.dxx.plus/tags/themes/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        <title>Sip</title>
+        <link>https://www.dxx.plus/tags/sip/</link>
+        <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/tags/themes/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Tag With Whitespaces</title>
-        <link>https://www.dxx.plus/tags/tag-with-whitespaces/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/tag-with-whitespaces/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Text</title>
-        <link>https://www.dxx.plus/tags/text/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/text/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Emoji</title>
-        <link>https://www.dxx.plus/tags/emoji/</link>
-        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/emoji/</guid>
+        <guid>https://www.dxx.plus/tags/sip/</guid>
         <description></description>
         </item>
         

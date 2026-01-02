@@ -5,35 +5,32 @@
     <loc>https://www.dxx.plus/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/2openser/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.dxx.plus/categories/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/kamailio/</loc>
+    <loc>https://www.dxx.plus/tags/kamailio/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/opensips/</loc>
+    <loc>https://www.dxx.plus/tags/openser/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.dxx.plus/tags/opensips/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/post/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/sip/</loc>
+    <loc>https://www.dxx.plus/tags/sip/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/p/sip/</loc>
+    <loc>https://www.dxx.plus/p/sip-opensips-rtp-0612/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/p/test-chinese/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <loc>https://www.dxx.plus/tags/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/test/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <loc>https://www.dxx.plus/categories/%E9%80%9A%E8%AE%AF/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
@@ -41,54 +38,11 @@
     <loc>https://www.dxx.plus/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/p/markdown-syntax-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/p/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/tag-with-whitespaces/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/categories/test-with-whitespaces/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/p/math-typesetting/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/p/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.dxx.plus/links/</loc>
   </url><url>
     <loc>https://www.dxx.plus/search/</loc>
+  </url><url>
+    <loc>https://www.dxx.plus/categories/test/</loc>
   </url><url>
     <loc>https://www.dxx.plus/%E5%85%B3%E4%BA%8E/</loc>
   </url>
