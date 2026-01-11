@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Kamailio on 陪伴小屋</title>
-        <link>https://www.dxx.plus/tags/kamailio/</link>
+        <link>http://localhost:1313/tags/kamailio/</link>
         <description>Recent content in Kamailio on 陪伴小屋</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Tobby</copyright>
-        <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dxx.plus/tags/kamailio/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/kamailio/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>sip - 使用 OpenSIPS/Kamailio/OpenSER 进行 RTP 代理</title>
-        <link>https://www.dxx.plus/p/sip-opensips-rtp-0612/</link>
+        <link>http://localhost:1313/p/sip-opensips-rtp-0612/</link>
         <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/p/sip-opensips-rtp-0612/</guid>
-        <description>&lt;img src="https://www.dxx.plus/p/sip-opensips-rtp-0612/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post sip - 使用 OpenSIPS/Kamailio/OpenSER 进行 RTP 代理" /&gt;&lt;p&gt;from:https://www.coder.work/article/6748986&lt;/p&gt;
+        <guid>http://localhost:1313/p/sip-opensips-rtp-0612/</guid>
+        <description>&lt;img src="http://localhost:1313/1-7.jpg" alt="Featured image of post sip - 使用 OpenSIPS/Kamailio/OpenSER 进行 RTP 代理" /&gt;&lt;p&gt;from:https://www.coder.work/article/6748986&lt;/p&gt;
 &lt;p&gt;我有一个监听多个 IP 的 OpenSIPS 服务器。
 如果我将调用路由回下一个点，我想确保所有信令和媒体都来自调用最初登陆的 IP(我不希望调用者和被调用者知道彼此的 IP 地址)。&lt;/p&gt;
 &lt;p&gt;我相信我需要像 RTPProxy 这样的东西。&lt;/p&gt;

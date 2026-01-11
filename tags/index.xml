@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on 陪伴小屋</title>
-        <link>https://www.dxx.plus/tags/</link>
+        <link>http://localhost:1313/tags/</link>
         <description>Recent content in Tags on 陪伴小屋</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Tobby</copyright>
-        <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dxx.plus/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Kamailio</title>
-        <link>https://www.dxx.plus/tags/kamailio/</link>
+        <link>http://localhost:1313/tags/kamailio/</link>
         <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/tags/kamailio/</guid>
+        <guid>http://localhost:1313/tags/kamailio/</guid>
         <description></description>
         </item>
         <item>
         <title>OpenSER</title>
-        <link>https://www.dxx.plus/tags/openser/</link>
+        <link>http://localhost:1313/tags/openser/</link>
         <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/tags/openser/</guid>
+        <guid>http://localhost:1313/tags/openser/</guid>
         <description></description>
         </item>
         <item>
         <title>OpenSIPS</title>
-        <link>https://www.dxx.plus/tags/opensips/</link>
+        <link>http://localhost:1313/tags/opensips/</link>
         <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/tags/opensips/</guid>
+        <guid>http://localhost:1313/tags/opensips/</guid>
         <description></description>
         </item>
         <item>
         <title>Sip</title>
-        <link>https://www.dxx.plus/tags/sip/</link>
+        <link>http://localhost:1313/tags/sip/</link>
         <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.dxx.plus/tags/sip/</guid>
+        <guid>http://localhost:1313/tags/sip/</guid>
         <description></description>
         </item>
         

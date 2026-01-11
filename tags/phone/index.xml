@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Phone on 陪伴小屋</title>
+        <link>http://localhost:1313/tags/phone/</link>
+        <description>Recent content in Phone on 陪伴小屋</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Tobby</copyright>
+        <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/phone/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>号码归属地信息从dat文件导出成列表</title>
+        <link>http://localhost:1313/p/phone-export-python-0410/</link>
+        <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/phone-export-python-0410/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

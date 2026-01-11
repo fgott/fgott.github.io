@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.dxx.plus/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/tags/kamailio/</loc>
+    <loc>http://localhost:1313/tags/kamailio/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/tags/openser/</loc>
+    <loc>http://localhost:1313/tags/openser/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/tags/opensips/</loc>
+    <loc>http://localhost:1313/tags/opensips/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/tags/sip/</loc>
+    <loc>http://localhost:1313/tags/sip/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/p/sip-opensips-rtp-0612/</loc>
+    <loc>http://localhost:1313/p/sip-opensips-rtp-0612/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/%E9%80%9A%E8%AE%AF/</loc>
+    <loc>http://localhost:1313/categories/%E9%80%9A%E8%AE%AF/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/archives/</loc>
+    <loc>http://localhost:1313/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/page/</loc>
+    <loc>http://localhost:1313/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/links/</loc>
+    <loc>http://localhost:1313/links/</loc>
   </url><url>
-    <loc>https://www.dxx.plus/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url><url>
-    <loc>https://www.dxx.plus/categories/test/</loc>
+    <loc>http://localhost:1313/categories/test/</loc>
   </url><url>
-    <loc>https://www.dxx.plus/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>http://localhost:1313/%E5%85%B3%E4%BA%8E/</loc>
   </url>
 </urlset>
