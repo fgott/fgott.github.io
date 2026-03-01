@@ -5,25 +5,7 @@
     <loc>https://www.dxx.plus/</loc>
     <lastmod>2026-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/tags/attack/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/categories/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.dxx.plus/post/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/tcp-floor/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/p/tcp-attack-tcp-floor-0114/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2026-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/p/cjbx7znowa/</loc>
@@ -34,6 +16,9 @@
   </url><url>
     <loc>https://www.dxx.plus/p/jg8tlns_c/</loc>
     <lastmod>2024-06-12T14:42:27+08:00</lastmod>
+  </url><url>
+    <loc>https://www.dxx.plus/categories/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/tags/kamailio/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
@@ -48,6 +33,9 @@
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/p/sip-opensips-rtp-0612/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.dxx.plus/tags/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/categories/%E9%80%9A%E8%AE%AF/</loc>
@@ -100,9 +88,6 @@
   </url><url>
     <loc>https://www.dxx.plus/tags/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2023-04-03T19:54:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/p/4kdahhg29/</loc>
-    <lastmod>2023-03-31T15:10:48+08:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/p/p28rajzca/</loc>
     <lastmod>2023-03-31T15:09:52+08:00</lastmod>
