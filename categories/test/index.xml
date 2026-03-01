@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Test on 陪伴小屋</title>
+        <title>Test on PandaK&#39;s Blog</title>
         <link>https://www.dxx.plus/categories/test/</link>
-        <description>Recent content in Test on 陪伴小屋</description>
+        <description>Recent content in Test on PandaK&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Tobby</copyright><atom:link href="https://www.dxx.plus/categories/test/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>PandaK © 2025</copyright><atom:link href="https://www.dxx.plus/categories/test/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

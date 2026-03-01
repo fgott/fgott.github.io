@@ -9,10 +9,24 @@
 <link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="号码归属地信息从dat文件导出成列表">
 <meta property='og:description' content="广电开始有电信业务了，号码归属地表又是一顿更新，如果跟不上步伐可能会引发一些事故。目前暂时本人暂时无法做到自己去爬数据，所以就只能借助网上大佬的数据库来使用了。">
 <meta property='og:url' content='https://www.dxx.plus/p/phone-export-python-0410/'>
-<meta property='og:site_name' content='陪伴小屋'>
+<meta property='og:site_name' content='PandaK&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:tag' content='phone' /><meta property='article:published_time' content='2023-04-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-04-10T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="号码归属地信息从dat文件导出成列表">
 <meta name="twitter:description" content="广电开始有电信业务了，号码归属地表又是一顿更新，如果跟不上步伐可能会引发一些事故。目前暂时本人暂时无法做到自己去爬数据，所以就只能借助网上大佬的数据库来使用了。">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLFVTLS55R"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XLFVTLS55R');
+        }
+      </script>
     </head>
     <body class="
     article-page
@@ -56,8 +70,8 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/1-7_hu_113aedcd54b7a73b.jpg" width="300"
+                            height="169" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
                 </a>
@@ -69,8 +83,8 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">陪伴小屋</a></h1>
-            <h2 class="site-description">陪伴小屋</h2>
+            <h1 class="site-name"><a href="/">PandaK&#39;s Blog</a></h1>
+            <h2 class="site-description">记录生活、记录成长。</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -243,7 +257,34 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents"></nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -763,7 +804,7 @@
         
             2025 - 
         
-        2026 Tobby
+        2026 PandaK © 2025
     </section>
     
     <section class="powerby">
@@ -870,52 +911,6 @@
 
         document.head.appendChild(customFont);
     }());
-</script>
-<style>
-    #TableOfContents > ul, ol {
-        ul, ol {
-            display: none;
-        }
-        .open {
-            display: block;
-        }
-    }
-</style>
-
-<script>
-    function initTocHide() {
-        
-        let toc = document.querySelector(".widget--toc");
-        if (!toc) {
-            return;
-        }
-        
-        window.addEventListener('scroll', function() {
-            
-            let openUl = document.querySelectorAll(".open");
-            if (openUl.length > 0) {
-              openUl.forEach((ul) => {
-                ul.classList.remove("open")
-              })
-            }
-            
-            let currentLi = document.querySelector(".active-class");
-            if (!currentLi) {
-                return
-            }
-            
-            if (currentLi.children.length > 1) {
-                currentLi.children[1].classList.add("open")
-            }
-            
-            let ul = currentLi.parentElement;
-            do {
-                ul.classList.add("open");
-                ul = ul.parentElement.parentElement
-            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
-        });
-    }
-    initTocHide()
 </script>
 
     </body>

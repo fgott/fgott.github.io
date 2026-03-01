@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>OpenSER on 陪伴小屋</title>
+        <title>OpenSER on PandaK&#39;s Blog</title>
         <link>https://www.dxx.plus/tags/openser/</link>
-        <description>Recent content in OpenSER on 陪伴小屋</description>
+        <description>Recent content in OpenSER on PandaK&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Tobby</copyright>
+        <copyright>PandaK © 2025</copyright>
         <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dxx.plus/tags/openser/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>sip - 使用 OpenSIPS/Kamailio/OpenSER 进行 RTP 代理</title>
         <link>https://www.dxx.plus/p/sip-opensips-rtp-0612/</link>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Mysql on PandaK&#39;s Blog</title>
+        <link>https://www.dxx.plus/categories/mysql/</link>
+        <description>Recent content in Mysql on PandaK&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>PandaK © 2025</copyright>
+        <lastBuildDate>Tue, 11 Aug 2020 16:27:18 +0800</lastBuildDate><atom:link href="https://www.dxx.plus/categories/mysql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>mysql 命令笔记</title>
+        <link>https://www.dxx.plus/p/16/</link>
+        <pubDate>Wed, 15 Jul 2020 16:03:00 +0800</pubDate>
+        
+        <guid>https://www.dxx.plus/p/16/</guid>
+        <description>&lt;h1 id=&#34;当中慢sql或锁sql&#34;&gt;当中慢sql或锁sql
+&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;select * from information_schema.processlist where command &amp;lt;&amp;gt;&#39;Sleep&#39; order by time DESC limit 5; 
+
+SELECT p2.`HOST` Blockedhost,  
+p2.`USER` BlockedUser,  
+r.trx_id BlockedTrxId,      
+        r.trx_mysql_thread_id BlockedThreadId,      
+        TIMESTAMPDIFF(      
+            SECOND,      
+            r.trx_wait_started,      
+            CURRENT_TIMESTAMP      
+        ) WaitTime,      
+        r.trx_query BlockedQuery,      
+        l.lock_table BlockedTable,    
+        m.`lock_mode` BlockedLockMode,  
+        m.`lock_type` BlockedLockType,  
+        m.`lock_index` BlockedLockIndex,  
+        m.`lock_space` BlockedLockSpace,  
+        m.lock_page BlockedLockPage,  
+        m.lock_rec BlockedLockRec,  
+        m.lock_data BlockedLockData,   
+        p.`HOST` blocking_host,   
+        p.`USER` blocking_user,  
+        b.trx_id BlockingTrxid,      
+        b.trx_mysql_thread_id BlockingThreadId,  
+        b.trx_query BlockingQuery,  
+        l.`lock_mode` BlockingLockMode,  
+        l.`lock_type` BlockingLockType,  
+        l.`lock_index` BlockingLockIndex,  
+        l.`lock_space` BlockingLockSpace,  
+        l.lock_page BlockingLockPage,  
+        l.lock_rec BlockingLockRec,  
+        l.lock_data BlockingLockData,           
+       IF (p.COMMAND = &#39;Sleep&#39;, CONCAT(p.TIME,&#39; seconds&#39;), 0) idel_in_trx               
+    FROM      
+        information_schema.INNODB_LOCK_WAITS w      
+    INNER JOIN information_schema.INNODB_TRX b ON b.trx_id = w.blocking_trx_id      
+    INNER JOIN information_schema.INNODB_TRX r ON r.trx_id = w.requesting_trx_id      
+    INNER JOIN information_schema.INNODB_LOCKS l ON w.blocking_lock_id = l.lock_id  AND l.`lock_trx_id`=b.`trx_id`  
+      INNER JOIN information_schema.INNODB_LOCKS m ON m.`lock_id`=w.`requested_lock_id` AND m.`lock_trx_id`=r.`trx_id`  
+    INNER JOIN information_schema. PROCESSLIST p ON p.ID = b.trx_mysql_thread_id     
+ INNER JOIN information_schema. PROCESSLIST p2 ON p2.ID = r.trx_mysql_thread_id   
+    ORDER BY      
+        WaitTime DESC;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;批量杀线程&#34;&gt;批量杀线程
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;select CONCAT(&#39;kill &#39;,id,&#39;;&#39;) from information_schema.processlist where host=&#39;%&#39; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;锁语句&#34;&gt;锁语句
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;select *  from information_schema.processlist where command &amp;lt;&amp;gt;&#39;Sleep&#39; order by time DESC limit 5;  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;连接数&#34;&gt;连接数
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;select *  from information_schema.processlist
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;连接数分组&#34;&gt;连接数分组
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;SELECT substring_index(host, char(58), 1) ip , count(*) count2 FROM information_schema.processlist GROUP BY ip
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;腾讯云连接库查询方式&#34;&gt;腾讯云连接库查询方式
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;show status like &#39;Threads%&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;查询即将过期的分区表&#34;&gt;查询即将过期的分区表
+&lt;/h2&gt;&lt;p&gt;需要拥有select对象information_schema权限。 database_name要改成项目自己的数据库名，不然查不到数据。
+select TABLE_NAME,MAX(PARTITION_NAME)
+from information_schema.&lt;code&gt;PARTITIONS&lt;/code&gt;
+where TABLE_SCHEMA=&amp;lsquo;database_name&amp;rsquo;
+and PARTITION_METHOD=&amp;lsquo;RANGE&amp;rsquo;
+and TABLE_NAME not like &amp;lsquo;%201%&amp;rsquo;
+group by TABLE_NAME ;&lt;/p&gt;
+&lt;h2 id=&#34;查看sql_mode&#34;&gt;查看sql_mode
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;select @@global.sql_mode;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

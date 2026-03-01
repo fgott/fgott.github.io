@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="$args #请求中的参数值 $query_string #同 $args $arg_NAME #GET请求中NAME的值 $is_args #如果请求中有参数，值为&quot;?&quot;，否则为空字符串 $uri #请求中的当前URI(不带请求参数，参数位于$args)，可以不同于浏览器传递的$request_uri的值，它可以通过内部重定向，或者使用index指令进行修改，$uri不包含主机名，如&quot;/foo/bar.html&quot;。 $document_uri #同 $uri $document_root #当前请求的文档根目录或别名 $host #优先级：HTTP请求行的主机名&gt;&ldquo;HOST&quot;请求头字段&gt;符合请求的服务器名.请求中的主机头字段，如果请求中的主机头不可用，则为服务器处理请求的服务器名称 $hostname #主机名 $https #如果开启了SSL安全模式，值为&quot;on&rdquo;，否则为空字符串。 $binary_remote_addr #客户端地址的二进制形式，固定长度为4个字节 $body_bytes_sent #传输给客户端的字节数，响应头不计算在内；这个变量和Apache的mod_log_config模块中的&quot;%B&quot;参数保持兼容 $bytes_sent #传输给客户端的字节数 $connection #TCP连接的序列号 $connection_requests #TCP连接当前的请求数量 $content_length #&ldquo;Content-Length&rdquo; 请求头字段 $content_type #&ldquo;Content-Type&rdquo; 请求头字段 $cookie_name #cookie名称 $limit_rate #用于设置响应的速度限制 $msec #当前的Unix时间戳 $nginx_version #nginx版本 $pid #工作进程的PID $pipe #如果请求来自管道通信，值为&quot;p&quot;，否则为&quot;.&quot; $proxy_protocol_addr #获取代理访问服务器的客户端地址，如果是直接访问，该值为空字符串 $realpath_root #当前请求的文档根目录或别名的真实路径，会将所有符号连接转换为真实路径 $remote_addr #客户端地址 $remote_port #客户端端口 $remote_user #用于HTTP基础认证服务的用户名 $request #代表客户端的请求地址 $request_body #客户端的请求主体：此变量可在location中使用，将请求主体通过proxy_pass，fastcgi_pass，uwsgi_pass和scgi_pass传递给下一级的代理服务器 $request_body_file #将客户端请求主体保存在临时文件中。文件处理结束后，此文件需删除。如果需要之一开启此功能，需要设置client_body_in_file_only。如果将次文件传 递给后端的代理服务器，需要禁用request body，即设置proxy_pass_request_body off，fastcgi_pass_request_body off，uwsgi_pass_request_body off，or scgi_pass_request_body off $request_completion #如果请求成功，值为&quot;OK&quot;，如果请求未完成或者请求不是一个范围请求的最后一部分，则为空 $request_filename #当前连接请求的文件路径，由root或alias指令与URI请求生成 $request_length #请求的长度 (包括请求的地址，http请求头和请求主体) $request_method #HTTP请求方法，通常为&quot;GET&quot;或&quot;POST&quot; $request_time #处理客户端请求使用的时间,单位为秒，精度毫秒； 从读入客户端的第一个字节开始，直到把最后一个字符发送给客户端后进行日志写入为止。 $request_uri #这个变量等于包含一些客户端请求参数的原始URI，它无法修改，请查看$uri更改或重写URI，不包含主机名，例如：&quot;/cnphp/test.php?arg=freemouse&quot; $scheme #请求使用的Web协议，&ldquo;http&rdquo; 或 &ldquo;https&rdquo; $server_addr #服务器端地址，需要注意的是：为了避免访问linux系统内核，应将ip地址提前设置在配置文件中 $server_name #服务器名 $server_port #服务器端口 $server_protocol #服务器的HTTP版本，通常为 &ldquo;HTTP/1.0&rdquo; 或 &ldquo;HTTP/1.1&rdquo; $status #HTTP响应代码 $time_iso8601 #服务器时间的ISO 8610格式 $time_local #服务器时间（LOG Format 格式） $cookie_NAME #客户端请求Header头中的cookie变量，前缀&quot;$cookie_&ldquo;加上cookie名称的变量，该变量的值即为cookie名称的值 $http_NAME #匹配任意请求头字段；变量名中的后半部分NAME可以替换成任意请求头字段，如在配置文件中需要获取http请求头：&ldquo;Accept-Language&rdquo;，$http_accept_language即可 $http_cookie $http_host #请求地址，即浏览器中你输入的地址（IP或域名） $http_referer #url跳转来源,用来记录从那个页面链接访问过来的 $http_user_agent #用户终端浏览器等信息 $http_x_forwarded_for $sent_http_NAME #可以设置任意http响应头字段；变量名中的后半部分NAME可以替换成任意响应头字段，如需要设置响应头Content-length，$sent_http_content_length即可 $sent_http_cache_control $sent_http_connection $sent_http_content_type $sent_http_keep_alive $sent_http_last_modified $sent_http_location $sent_http_transfer_encoding\n">
+<title>Nginx log日志参数详解</title>
+
+<link rel='canonical' href='https://www.dxx.plus/p/22/'>
+
+<link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="Nginx log日志参数详解">
+<meta property='og:description' content="$args #请求中的参数值 $query_string #同 $args $arg_NAME #GET请求中NAME的值 $is_args #如果请求中有参数，值为&quot;?&quot;，否则为空字符串 $uri #请求中的当前URI(不带请求参数，参数位于$args)，可以不同于浏览器传递的$request_uri的值，它可以通过内部重定向，或者使用index指令进行修改，$uri不包含主机名，如&quot;/foo/bar.html&quot;。 $document_uri #同 $uri $document_root #当前请求的文档根目录或别名 $host #优先级：HTTP请求行的主机名&gt;&ldquo;HOST&quot;请求头字段&gt;符合请求的服务器名.请求中的主机头字段，如果请求中的主机头不可用，则为服务器处理请求的服务器名称 $hostname #主机名 $https #如果开启了SSL安全模式，值为&quot;on&rdquo;，否则为空字符串。 $binary_remote_addr #客户端地址的二进制形式，固定长度为4个字节 $body_bytes_sent #传输给客户端的字节数，响应头不计算在内；这个变量和Apache的mod_log_config模块中的&quot;%B&quot;参数保持兼容 $bytes_sent #传输给客户端的字节数 $connection #TCP连接的序列号 $connection_requests #TCP连接当前的请求数量 $content_length #&ldquo;Content-Length&rdquo; 请求头字段 $content_type #&ldquo;Content-Type&rdquo; 请求头字段 $cookie_name #cookie名称 $limit_rate #用于设置响应的速度限制 $msec #当前的Unix时间戳 $nginx_version #nginx版本 $pid #工作进程的PID $pipe #如果请求来自管道通信，值为&quot;p&quot;，否则为&quot;.&quot; $proxy_protocol_addr #获取代理访问服务器的客户端地址，如果是直接访问，该值为空字符串 $realpath_root #当前请求的文档根目录或别名的真实路径，会将所有符号连接转换为真实路径 $remote_addr #客户端地址 $remote_port #客户端端口 $remote_user #用于HTTP基础认证服务的用户名 $request #代表客户端的请求地址 $request_body #客户端的请求主体：此变量可在location中使用，将请求主体通过proxy_pass，fastcgi_pass，uwsgi_pass和scgi_pass传递给下一级的代理服务器 $request_body_file #将客户端请求主体保存在临时文件中。文件处理结束后，此文件需删除。如果需要之一开启此功能，需要设置client_body_in_file_only。如果将次文件传 递给后端的代理服务器，需要禁用request body，即设置proxy_pass_request_body off，fastcgi_pass_request_body off，uwsgi_pass_request_body off，or scgi_pass_request_body off $request_completion #如果请求成功，值为&quot;OK&quot;，如果请求未完成或者请求不是一个范围请求的最后一部分，则为空 $request_filename #当前连接请求的文件路径，由root或alias指令与URI请求生成 $request_length #请求的长度 (包括请求的地址，http请求头和请求主体) $request_method #HTTP请求方法，通常为&quot;GET&quot;或&quot;POST&quot; $request_time #处理客户端请求使用的时间,单位为秒，精度毫秒； 从读入客户端的第一个字节开始，直到把最后一个字符发送给客户端后进行日志写入为止。 $request_uri #这个变量等于包含一些客户端请求参数的原始URI，它无法修改，请查看$uri更改或重写URI，不包含主机名，例如：&quot;/cnphp/test.php?arg=freemouse&quot; $scheme #请求使用的Web协议，&ldquo;http&rdquo; 或 &ldquo;https&rdquo; $server_addr #服务器端地址，需要注意的是：为了避免访问linux系统内核，应将ip地址提前设置在配置文件中 $server_name #服务器名 $server_port #服务器端口 $server_protocol #服务器的HTTP版本，通常为 &ldquo;HTTP/1.0&rdquo; 或 &ldquo;HTTP/1.1&rdquo; $status #HTTP响应代码 $time_iso8601 #服务器时间的ISO 8610格式 $time_local #服务器时间（LOG Format 格式） $cookie_NAME #客户端请求Header头中的cookie变量，前缀&quot;$cookie_&ldquo;加上cookie名称的变量，该变量的值即为cookie名称的值 $http_NAME #匹配任意请求头字段；变量名中的后半部分NAME可以替换成任意请求头字段，如在配置文件中需要获取http请求头：&ldquo;Accept-Language&rdquo;，$http_accept_language即可 $http_cookie $http_host #请求地址，即浏览器中你输入的地址（IP或域名） $http_referer #url跳转来源,用来记录从那个页面链接访问过来的 $http_user_agent #用户终端浏览器等信息 $http_x_forwarded_for $sent_http_NAME #可以设置任意http响应头字段；变量名中的后半部分NAME可以替换成任意响应头字段，如需要设置响应头Content-length，$sent_http_content_length即可 $sent_http_cache_control $sent_http_connection $sent_http_content_type $sent_http_keep_alive $sent_http_last_modified $sent_http_location $sent_http_transfer_encoding\n">
+<meta property='og:url' content='https://www.dxx.plus/p/22/'>
+<meta property='og:site_name' content='PandaK&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-07-30T14:52:07&#43;08:00'/><meta property='article:modified_time' content='2020-07-30T14:52:07&#43;08:00'/>
+<meta name="twitter:title" content="Nginx log日志参数详解">
+<meta name="twitter:description" content="$args #请求中的参数值 $query_string #同 $args $arg_NAME #GET请求中NAME的值 $is_args #如果请求中有参数，值为&quot;?&quot;，否则为空字符串 $uri #请求中的当前URI(不带请求参数，参数位于$args)，可以不同于浏览器传递的$request_uri的值，它可以通过内部重定向，或者使用index指令进行修改，$uri不包含主机名，如&quot;/foo/bar.html&quot;。 $document_uri #同 $uri $document_root #当前请求的文档根目录或别名 $host #优先级：HTTP请求行的主机名&gt;&ldquo;HOST&quot;请求头字段&gt;符合请求的服务器名.请求中的主机头字段，如果请求中的主机头不可用，则为服务器处理请求的服务器名称 $hostname #主机名 $https #如果开启了SSL安全模式，值为&quot;on&rdquo;，否则为空字符串。 $binary_remote_addr #客户端地址的二进制形式，固定长度为4个字节 $body_bytes_sent #传输给客户端的字节数，响应头不计算在内；这个变量和Apache的mod_log_config模块中的&quot;%B&quot;参数保持兼容 $bytes_sent #传输给客户端的字节数 $connection #TCP连接的序列号 $connection_requests #TCP连接当前的请求数量 $content_length #&ldquo;Content-Length&rdquo; 请求头字段 $content_type #&ldquo;Content-Type&rdquo; 请求头字段 $cookie_name #cookie名称 $limit_rate #用于设置响应的速度限制 $msec #当前的Unix时间戳 $nginx_version #nginx版本 $pid #工作进程的PID $pipe #如果请求来自管道通信，值为&quot;p&quot;，否则为&quot;.&quot; $proxy_protocol_addr #获取代理访问服务器的客户端地址，如果是直接访问，该值为空字符串 $realpath_root #当前请求的文档根目录或别名的真实路径，会将所有符号连接转换为真实路径 $remote_addr #客户端地址 $remote_port #客户端端口 $remote_user #用于HTTP基础认证服务的用户名 $request #代表客户端的请求地址 $request_body #客户端的请求主体：此变量可在location中使用，将请求主体通过proxy_pass，fastcgi_pass，uwsgi_pass和scgi_pass传递给下一级的代理服务器 $request_body_file #将客户端请求主体保存在临时文件中。文件处理结束后，此文件需删除。如果需要之一开启此功能，需要设置client_body_in_file_only。如果将次文件传 递给后端的代理服务器，需要禁用request body，即设置proxy_pass_request_body off，fastcgi_pass_request_body off，uwsgi_pass_request_body off，or scgi_pass_request_body off $request_completion #如果请求成功，值为&quot;OK&quot;，如果请求未完成或者请求不是一个范围请求的最后一部分，则为空 $request_filename #当前连接请求的文件路径，由root或alias指令与URI请求生成 $request_length #请求的长度 (包括请求的地址，http请求头和请求主体) $request_method #HTTP请求方法，通常为&quot;GET&quot;或&quot;POST&quot; $request_time #处理客户端请求使用的时间,单位为秒，精度毫秒； 从读入客户端的第一个字节开始，直到把最后一个字符发送给客户端后进行日志写入为止。 $request_uri #这个变量等于包含一些客户端请求参数的原始URI，它无法修改，请查看$uri更改或重写URI，不包含主机名，例如：&quot;/cnphp/test.php?arg=freemouse&quot; $scheme #请求使用的Web协议，&ldquo;http&rdquo; 或 &ldquo;https&rdquo; $server_addr #服务器端地址，需要注意的是：为了避免访问linux系统内核，应将ip地址提前设置在配置文件中 $server_name #服务器名 $server_port #服务器端口 $server_protocol #服务器的HTTP版本，通常为 &ldquo;HTTP/1.0&rdquo; 或 &ldquo;HTTP/1.1&rdquo; $status #HTTP响应代码 $time_iso8601 #服务器时间的ISO 8610格式 $time_local #服务器时间（LOG Format 格式） $cookie_NAME #客户端请求Header头中的cookie变量，前缀&quot;$cookie_&ldquo;加上cookie名称的变量，该变量的值即为cookie名称的值 $http_NAME #匹配任意请求头字段；变量名中的后半部分NAME可以替换成任意请求头字段，如在配置文件中需要获取http请求头：&ldquo;Accept-Language&rdquo;，$http_accept_language即可 $http_cookie $http_host #请求地址，即浏览器中你输入的地址（IP或域名） $http_referer #url跳转来源,用来记录从那个页面链接访问过来的 $http_user_agent #用户终端浏览器等信息 $http_x_forwarded_for $sent_http_NAME #可以设置任意http响应头字段；变量名中的后半部分NAME可以替换成任意响应头字段，如需要设置响应头Content-length，$sent_http_content_length即可 $sent_http_cache_control $sent_http_connection $sent_http_content_type $sent_http_keep_alive $sent_http_last_modified $sent_http_location $sent_http_transfer_encoding\n">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLFVTLS55R"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XLFVTLS55R');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/1-7_hu_113aedcd54b7a73b.jpg" width="300"
+                            height="169" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤖</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">PandaK&#39;s Blog</a></h1>
+            <h2 class="site-description">记录生活、记录成长。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents"></nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%AD%A6%E4%B9%A0/" >
+                学习
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/22/">Nginx log日志参数详解</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2020-07-30T14:52:07&#43;08:00'>Jul 30, 2020</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>$args #请求中的参数值
+$query_string #同 $args
+$arg_NAME #GET请求中NAME的值
+$is_args #如果请求中有参数，值为&quot;?&quot;，否则为空字符串
+$uri #请求中的当前URI(不带请求参数，参数位于$args)，可以不同于浏览器传递的$request_uri的值，它可以通过内部重定向，或者使用index指令进行修改，$uri不包含主机名，如&quot;/foo/bar.html&quot;。
+$document_uri #同 $uri
+$document_root #当前请求的文档根目录或别名
+$host #优先级：HTTP请求行的主机名&gt;&ldquo;HOST&quot;请求头字段&gt;符合请求的服务器名.请求中的主机头字段，如果请求中的主机头不可用，则为服务器处理请求的服务器名称
+$hostname #主机名
+$https #如果开启了SSL安全模式，值为&quot;on&rdquo;，否则为空字符串。
+$binary_remote_addr #客户端地址的二进制形式，固定长度为4个字节
+$body_bytes_sent #传输给客户端的字节数，响应头不计算在内；这个变量和Apache的mod_log_config模块中的&quot;%B&quot;参数保持兼容
+$bytes_sent #传输给客户端的字节数
+$connection #TCP连接的序列号
+$connection_requests #TCP连接当前的请求数量
+$content_length #&ldquo;Content-Length&rdquo; 请求头字段
+$content_type #&ldquo;Content-Type&rdquo; 请求头字段
+$cookie_name #cookie名称
+$limit_rate #用于设置响应的速度限制
+$msec #当前的Unix时间戳
+$nginx_version #nginx版本
+$pid #工作进程的PID
+$pipe #如果请求来自管道通信，值为&quot;p&quot;，否则为&quot;.&quot;
+$proxy_protocol_addr #获取代理访问服务器的客户端地址，如果是直接访问，该值为空字符串
+$realpath_root #当前请求的文档根目录或别名的真实路径，会将所有符号连接转换为真实路径
+$remote_addr #客户端地址
+$remote_port #客户端端口
+$remote_user #用于HTTP基础认证服务的用户名
+$request #代表客户端的请求地址
+$request_body #客户端的请求主体：此变量可在location中使用，将请求主体通过proxy_pass，fastcgi_pass，uwsgi_pass和scgi_pass传递给下一级的代理服务器
+$request_body_file #将客户端请求主体保存在临时文件中。文件处理结束后，此文件需删除。如果需要之一开启此功能，需要设置client_body_in_file_only。如果将次文件传 递给后端的代理服务器，需要禁用request body，即设置proxy_pass_request_body off，fastcgi_pass_request_body off，uwsgi_pass_request_body off，or scgi_pass_request_body off
+$request_completion #如果请求成功，值为&quot;OK&quot;，如果请求未完成或者请求不是一个范围请求的最后一部分，则为空
+$request_filename #当前连接请求的文件路径，由root或alias指令与URI请求生成
+$request_length #请求的长度 (包括请求的地址，http请求头和请求主体)
+$request_method #HTTP请求方法，通常为&quot;GET&quot;或&quot;POST&quot;
+$request_time #处理客户端请求使用的时间,单位为秒，精度毫秒； 从读入客户端的第一个字节开始，直到把最后一个字符发送给客户端后进行日志写入为止。
+$request_uri #这个变量等于包含一些客户端请求参数的原始URI，它无法修改，请查看$uri更改或重写URI，不包含主机名，例如：&quot;/cnphp/test.php?arg=freemouse&quot;
+$scheme #请求使用的Web协议，&ldquo;http&rdquo; 或 &ldquo;https&rdquo;
+$server_addr #服务器端地址，需要注意的是：为了避免访问linux系统内核，应将ip地址提前设置在配置文件中
+$server_name #服务器名
+$server_port #服务器端口
+$server_protocol #服务器的HTTP版本，通常为 &ldquo;HTTP/1.0&rdquo; 或 &ldquo;HTTP/1.1&rdquo;
+$status #HTTP响应代码
+$time_iso8601 #服务器时间的ISO 8610格式
+$time_local #服务器时间（LOG Format 格式）
+$cookie_NAME #客户端请求Header头中的cookie变量，前缀&quot;$cookie_&ldquo;加上cookie名称的变量，该变量的值即为cookie名称的值
+$http_NAME #匹配任意请求头字段；变量名中的后半部分NAME可以替换成任意请求头字段，如在配置文件中需要获取http请求头：&ldquo;Accept-Language&rdquo;，$http_accept_language即可
+$http_cookie
+$http_host #请求地址，即浏览器中你输入的地址（IP或域名）
+$http_referer #url跳转来源,用来记录从那个页面链接访问过来的
+$http_user_agent #用户终端浏览器等信息
+$http_x_forwarded_for
+$sent_http_NAME #可以设置任意http响应头字段；变量名中的后半部分NAME可以替换成任意响应头字段，如需要设置响应头Content-length，$sent_http_content_length即可
+$sent_http_cache_control
+$sent_http_connection
+$sent_http_content_type
+$sent_http_keep_alive
+$sent_http_last_modified
+$sent_http_location
+$sent_http_transfer_encoding</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"waline1-phi.vercel.app"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 PandaK © 2025
+    </section>
+    
+    <section class="powerby">
+        
+            记录生活、记录成长。 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

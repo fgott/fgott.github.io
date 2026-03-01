@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Python on 陪伴小屋</title>
+        <title>Python on PandaK&#39;s Blog</title>
         <link>https://www.dxx.plus/categories/python/</link>
-        <description>Recent content in Python on 陪伴小屋</description>
+        <description>Recent content in Python on PandaK&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Tobby</copyright>
+        <copyright>PandaK © 2025</copyright>
         <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dxx.plus/categories/python/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>号码归属地信息从dat文件导出成列表</title>
         <link>https://www.dxx.plus/p/phone-export-python-0410/</link>

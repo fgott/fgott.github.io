@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一．准备软件安装包 1、 Micro sip microsip-lite-3.14.4 或更高版本 2、Openvpn 3、Openvpn客户端配置文件 注：该文件不包含在下载链接中，会根据用户单独发送。若没收到请联系客服。\n1 2 3 4 5 https://wwqh.lanzouw.com/b02eq4rla 密码:4smq https://wwl.lanzn.com/b02c6m9he 密码:d3gk 二．Openvpn安装过程 ">
+<title>软电话安装</title>
+
+<link rel='canonical' href='https://www.dxx.plus/p/_ryumovdu/'>
+
+<link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="软电话安装">
+<meta property='og:description' content="一．准备软件安装包 1、 Micro sip microsip-lite-3.14.4 或更高版本 2、Openvpn 3、Openvpn客户端配置文件 注：该文件不包含在下载链接中，会根据用户单独发送。若没收到请联系客服。\n1 2 3 4 5 https://wwqh.lanzouw.com/b02eq4rla 密码:4smq https://wwl.lanzn.com/b02c6m9he 密码:d3gk 二．Openvpn安装过程 ">
+<meta property='og:url' content='https://www.dxx.plus/p/_ryumovdu/'>
+<meta property='og:site_name' content='PandaK&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='SIP' /><meta property='article:published_time' content='2023-06-25T16:50:00&#43;08:00'/><meta property='article:modified_time' content='2023-06-25T16:50:00&#43;08:00'/>
+<meta name="twitter:title" content="软电话安装">
+<meta name="twitter:description" content="一．准备软件安装包 1、 Micro sip microsip-lite-3.14.4 或更高版本 2、Openvpn 3、Openvpn客户端配置文件 注：该文件不包含在下载链接中，会根据用户单独发送。若没收到请联系客服。\n1 2 3 4 5 https://wwqh.lanzouw.com/b02eq4rla 密码:4smq https://wwl.lanzn.com/b02c6m9he 密码:d3gk 二．Openvpn安装过程 ">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLFVTLS55R"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XLFVTLS55R');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/1-7_hu_113aedcd54b7a73b.jpg" width="300"
+                            height="169" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤖</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">PandaK&#39;s Blog</a></h1>
+            <h2 class="site-description">记录生活、记录成长。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一准备软件安装包">一．准备软件安装包</a>
+      <ol>
+        <li><a href="#1-micro-sip">1、 Micro sip</a></li>
+        <li><a href="#2openvpn">2、Openvpn</a></li>
+        <li><a href="#3openvpn客户端配置文件">3、Openvpn客户端配置文件</a></li>
+      </ol>
+    </li>
+    <li><a href="#二openvpn安装过程">二．Openvpn安装过程</a>
+      <ol>
+        <li><a href="#21设置openvpn以管理员的身份运行">2.1设置openvpn以管理员的身份运行</a></li>
+        <li><a href="#22-导入vpn的配置文件">2.2 导入VPN的配置文件</a></li>
+        <li><a href="#23-连接openvpn">2.3 连接openvpn</a></li>
+      </ol>
+    </li>
+    <li><a href="#三安装软电话">三．安装软电话</a>
+      <ol>
+        <li><a href="#31-注册分机号">3.1 注册分机号</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/_ryumovdu/">软电话安装</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2023-06-25T16:50:00&#43;08:00'>Jun 25, 2023</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="一准备软件安装包">一．准备软件安装包
+</h2><h3 id="1-micro-sip">1、 Micro sip
+</h3><p>microsip-lite-3.14.4 或更高版本
+<a class="link" href="https://imgse.com/i/pCNsvH1"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNsvH1.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNsvH1.png"
+	
+	
+></a></p>
+<h3 id="2openvpn">2、Openvpn
+</h3><p><a class="link" href="https://imgse.com/i/pCNsjBR"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNsjBR.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNsjBR.png"
+	
+	
+></a></p>
+<h3 id="3openvpn客户端配置文件">3、Openvpn客户端配置文件
+</h3><p><a class="link" href="https://imgse.com/i/pCNsXu9"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNsXu9.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNsXu9.png"
+	
+	
+></a>
+注：该文件不包含在下载链接中，会根据用户单独发送。若没收到请联系客服。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://wwqh.lanzouw.com/b02eq4rla
+</span></span><span class="line"><span class="cl">密码:4smq
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">https://wwl.lanzn.com/b02c6m9he
+</span></span><span class="line"><span class="cl">密码:d3gk
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="二openvpn安装过程">二．Openvpn安装过程
+</h2><p><a class="link" href="https://imgse.com/i/pCNySN6"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNySN6.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNySN6.png"
+	
+	
+></a></p>
+<p><a class="link" href="https://imgse.com/i/pCNszAx"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNszAx.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNszAx.png"
+	
+	
+></a></p>
+<p><a class="link" href="https://imgse.com/i/pCNyC9O"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNyC9O.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNyC9O.png"
+	
+	
+></a></p>
+<p><a class="link" href="https://imgse.com/i/pCNyP3D"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNyP3D.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNyP3D.png"
+	
+	
+></a></p>
+<p>安装完后，桌面会生成程序的快捷方式图标如下
+<a class="link" href="https://imgse.com/i/pCNyp4K"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNyp4K.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNyp4K.png"
+	
+	
+></a></p>
+<h3 id="21设置openvpn以管理员的身份运行">2.1设置openvpn以管理员的身份运行
+</h3><p>鼠标移至openvpn快捷方式图标处，点击鼠标右键，选择属性
+<a class="link" href="https://imgse.com/i/pCNyige"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNyige.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNyige.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNyFjH"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNyFjH.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNyFjH.png"
+	
+	
+></a></p>
+<h3 id="22-导入vpn的配置文件">2.2 导入VPN的配置文件
+</h3><p>鼠标移至openvpn快捷方式图标处，双击打开openvpn，首次打开会因为没有配置文件报错，点击确定关闭即可。
+openvpn客户端会最小化在任务栏中（桌面右下角）如下</p>
+<p><a class="link" href="https://imgse.com/i/pCNRUc8"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRUc8.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRUc8.png"
+	
+	
+></a></p>
+<p>鼠标移至该图标处，点击鼠标右键，选择Import file&hellip;，在弹出的窗口中选择1.3 中客服提供的配置文件  client.ovpn，点击打开。如下
+<img src="/post-images/1687743496811.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+<img src="/post-images/1687743488099.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>出现弹出提示“File imported successfully” 则导入成功，点击确定关闭。
+<img src="/post-images/1687743503574.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="23-连接openvpn">2.3 连接openvpn
+</h3><p>打开openvpn，找到最小化在任务栏中的openvpn客户端，点击鼠标右键，选择connect，连接vpn</p>
+<p><a class="link" href="https://imgse.com/i/pCNRwng"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRwng.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRwng.png"
+	
+	
+></a></p>
+<p>输入vpn账号和密码，点击“ok” 按钮</p>
+<p><a class="link" href="https://imgse.com/i/pCNRB7j"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRB7j.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRB7j.png"
+	
+	
+></a></p>
+<p>成功连接的状态</p>
+<p><a class="link" href="https://imgse.com/i/pCNRajS"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRajS.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRajS.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNRN1f.png"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRN1f.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRN1f.png"
+	
+	
+></a></p>
+<h2 id="三安装软电话">三．安装软电话
+</h2><p><a class="link" href="https://imgse.com/i/pCNR0BQ"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNR0BQ.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNR0BQ.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNRrAs"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRrAs.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRrAs.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNRsNn"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRsNn.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRsNn.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNRyhq"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRyhq.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRyhq.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNRc90"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRc90.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRc90.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNRg3V"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRg3V.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRg3V.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNRRjU"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRRjU.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRRjU.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNR2cT"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNR2cT.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNR2cT.png"
+	
+	
+></a></p>
+<h3 id="31-注册分机号">3.1 注册分机号
+</h3><p>分机号和分机密码见附件《xxxx信息表.xlsx》，（SIP服务器/SIP代理/域名设置为表中“SIP服务器”，分机号对应每个人的分机号）</p>
+<p><a class="link" href="https://imgse.com/i/pCNRfuF"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRfuF.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRfuF.png"
+	
+	
+></a>
+<a class="link" href="https://imgse.com/i/pCNRhB4"  target="_blank" rel="noopener"
+    ><img src="https://s1.ax1x.com/2023/06/25/pCNRhB4.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pCNRhB4.png"
+	
+	
+></a></p>
+<p>成功连接后的状态
+<img src="/post-images/1687743420860.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/sip/">Sip</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"waline1-phi.vercel.app"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 PandaK © 2025
+    </section>
+    
+    <section class="powerby">
+        
+            记录生活、记录成长。 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

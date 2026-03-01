@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Iptalbes on PandaK&#39;s Blog</title>
+        <link>https://www.dxx.plus/tags/iptalbes/</link>
+        <description>Recent content in Iptalbes on PandaK&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>PandaK © 2025</copyright>
+        <lastBuildDate>Sat, 04 Jul 2020 22:04:20 +0800</lastBuildDate><atom:link href="https://www.dxx.plus/tags/iptalbes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux上iptables防火墙的基本应用教程</title>
+        <link>https://www.dxx.plus/p/4/</link>
+        <pubDate>Sat, 04 Jul 2020 22:04:20 +0800</pubDate>
+        
+        <guid>https://www.dxx.plus/p/4/</guid>
+        <description>&lt;p&gt;1、安装iptables防火墙
+如果没有安装iptables需要先安装，CentOS执行：
+yum install iptables -y
+yum install iptables-services -y /&lt;em&gt;CentOS7需安装此软件包&lt;/em&gt;/
+CentOS 7上默认安装了firewalld建议关闭并禁用：
+systemctl stop firewalld
+systemctl mask firewalld&lt;/p&gt;
+&lt;p&gt;Debian/Ubuntu执行：
+apt-get install iptables -y&lt;/p&gt;
+&lt;p&gt;2、清除已有iptables规则
+iptables -F
+iptables -X
+iptables -Z&lt;/p&gt;
+&lt;p&gt;3、开放指定的端口
+-A和-I参数分别为添加到规则末尾和规则最前面。
+#允许本地回环接口(即运行本机访问本机)
+iptables -A INPUT -i lo -j ACCEPT
+# 允许已建立的或相关连的通行
+iptables -A INPUT -m state &amp;ndash;state ESTABLISHED,RELATED -j ACCEPT
+#允许所有本机向外的访问
+iptables -A OUTPUT -j ACCEPT
+# 允许访问22端口
+iptables -A INPUT -p tcp &amp;ndash;dport 22 -j ACCEPT
+#允许访问80端口
+iptables -A INPUT -p tcp &amp;ndash;dport 80 -j ACCEPT
+#允许访问443端口
+iptables -A INPUT -p tcp &amp;ndash;dport 443 -j ACCEPT
+#允许FTP服务的21和20端口
+iptables -A INPUT -p tcp &amp;ndash;dport 21 -j ACCEPT
+iptables -A INPUT -p tcp &amp;ndash;dport 20 -j ACCEPT
+#如果有其他端口的话，规则也类似，稍微修改上述语句就行
+#允许ping
+iptables -A INPUT -p icmp -m icmp &amp;ndash;icmp-type 8 -j ACCEPT
+#禁止其他未允许的规则访问
+iptables -A INPUT -j REJECT  #（注意：如果22端口未加入允许规则，SSH链接会直接断开。）
+iptables -A FORWARD -j REJECT&lt;/p&gt;
+&lt;p&gt;4、屏蔽IP
+#如果只是想屏蔽IP的话“3、开放指定的端口”部分设置可以直接跳过。
+#屏蔽单个IP的命令是
+iptables -I INPUT -s 123.45.6.7 -j DROP
+#封整个段即从123.0.0.1到123.255.255.254的命令
+iptables -I INPUT -s 123.0.0.0/8 -j DROP
+#封IP段即从123.45.0.1到123.45.255.254的命令
+iptables -I INPUT -s 124.45.0.0/16 -j DROP
+#封IP段即从123.45.6.1到123.45.6.254的命令是
+iptables -I INPUT -s 123.45.6.0/24 -j DROP&lt;/p&gt;
+&lt;p&gt;5、屏蔽或允许某IP访问指定端口
+#屏蔽某IP访问指定端口，以22端口为例命令是
+iptables -I INPUT -s 123.45.6.7 -p tcp &amp;ndash;dport 22 -j DROP
+#允许某IP访问指定端口，以22端口为例命令是
+iptables -I INPUT -p tcp &amp;ndash;dport 22 -j DROP
+iptables -I INPUT -s 123.45.6.7 -p tcp &amp;ndash;dport 22 -j ACCEPT&lt;/p&gt;
+&lt;p&gt;6、查看已添加的iptables规则
+iptables -L -n&lt;/p&gt;
+&lt;p&gt;v：显示详细信息，包括每条规则的匹配包数量和匹配字节数
+x：在 v 的基础上，禁止自动单位换算（K、M） vps侦探
+n：只显示IP地址和端口号，不将ip解析为域名&lt;/p&gt;
+&lt;p&gt;7、删除已添加的iptables规则
+将所有iptables以序号标记显示，执行：
+iptables -L -n &amp;ndash;line-numbers
+比如要删除INPUT里序号为8的规则(要删除OUTPUT的话就改成OUTPUT，以此类推)，执行：
+iptables -D INPUT 8&lt;/p&gt;
+&lt;p&gt;8、iptables的开机启动及规则保存
+CentOS上可能会存在安装好iptables后，iptables并不开机自启动，可以执行一下：
+chkconfig &amp;ndash;level 345 iptables on
+CentOS7可执行：
+systemctl enable iptables
+将其加入开机启动。
+CentOS上可以执行：service iptables save保存规则。
+另外更需要注意的是Debian/Ubuntu上iptables是不会保存规则的。
+需要按如下步骤进行，让网卡关闭是保存iptables规则，启动时加载iptables规则：
+创建/etc/network/if-post-down.d/iptables 文件，添加如下内容：
+#!/bin/bash
+iptables-save &amp;gt; /etc/iptables.rules
+执行：chmod +x /etc/network/if-post-down.d/iptables 添加执行权限。
+创建/etc/network/if-pre-up.d/iptables 文件，添加如下内容：
+#!/bin/bash
+iptables-restore &amp;lt; /etc/iptables.rules
+执行：chmod +x /etc/network/if-pre-up.d/iptables 添加执行权限。&lt;/p&gt;
+&lt;p&gt;关于更多的iptables的使用方法可以执行：iptables &amp;ndash;help或网上搜索一下iptables参数的说明。
+如有问题欢迎在本文下留言或到VPS论坛反馈。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
