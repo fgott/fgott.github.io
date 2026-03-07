@@ -8,6 +8,9 @@
     <loc>https://www.dxx.plus/post/</loc>
     <lastmod>2026-01-14T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.dxx.plus/p/tcp-attack-tcp-floor-0114/</loc>
+    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.dxx.plus/p/cjbx7znowa/</loc>
     <lastmod>2025-06-26T10:15:52+08:00</lastmod>
   </url><url>
@@ -17,28 +20,7 @@
     <loc>https://www.dxx.plus/p/jg8tlns_c/</loc>
     <lastmod>2024-06-12T14:42:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/kamailio/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/openser/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/opensips/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/sip/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.dxx.plus/p/sip-opensips-rtp-0612/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/categories/%E9%80%9A%E8%AE%AF/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/tags/linux/</loc>
@@ -46,6 +28,12 @@
   </url><url>
     <loc>https://www.dxx.plus/p/tznvqq_bh/</loc>
     <lastmod>2023-07-05T11:28:13+08:00</lastmod>
+  </url><url>
+    <loc>https://www.dxx.plus/tags/</loc>
+    <lastmod>2023-07-05T11:28:13+08:00</lastmod>
+  </url><url>
+    <loc>https://www.dxx.plus/tags/sip/</loc>
+    <lastmod>2023-06-25T16:50:00+08:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/p/_ryumovdu/</loc>
     <lastmod>2023-06-25T16:50:00+08:00</lastmod>
@@ -56,7 +44,10 @@
     <loc>https://www.dxx.plus/p/6enl6lsik/</loc>
     <lastmod>2023-06-07T10:34:07+08:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/falsh/</loc>
+    <loc>https://www.dxx.plus/categories/</loc>
+    <lastmod>2023-04-14T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.dxx.plus/categories/flash/</loc>
     <lastmod>2023-04-14T10:00:00+08:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/tags/flash/</loc>
@@ -71,15 +62,6 @@
     <loc>https://www.dxx.plus/tags/tools/</loc>
     <lastmod>2023-04-13T16:18:10+08:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/tags/phone/</loc>
-    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/categories/python/</loc>
-    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.dxx.plus/tags/python/</loc>
-    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.dxx.plus/p/phone-export-python-0410/</loc>
     <lastmod>2023-04-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -88,6 +70,12 @@
   </url><url>
     <loc>https://www.dxx.plus/tags/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2023-04-03T19:54:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.dxx.plus/tags/python/</loc>
+    <lastmod>2023-03-31T15:10:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.dxx.plus/p/4kdahhg29/</loc>
+    <lastmod>2023-03-31T15:10:48+08:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/p/p28rajzca/</loc>
     <lastmod>2023-03-31T15:09:52+08:00</lastmod>
@@ -143,7 +131,7 @@
     <loc>https://www.dxx.plus/p/22/</loc>
     <lastmod>2020-07-30T14:52:07+08:00</lastmod>
   </url><url>
-    <loc>https://www.dxx.plus/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://www.dxx.plus/categories/%D1%A7%CF%B0/</loc>
     <lastmod>2020-07-30T14:52:07+08:00</lastmod>
   </url><url>
     <loc>https://www.dxx.plus/p/19/</loc>

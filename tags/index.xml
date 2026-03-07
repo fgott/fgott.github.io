@@ -7,44 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>PandaK © 2025</copyright>
-        <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dxx.plus/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Kamailio</title>
-        <link>https://www.dxx.plus/tags/kamailio/</link>
-        <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/kamailio/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>OpenSER</title>
-        <link>https://www.dxx.plus/tags/openser/</link>
-        <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/openser/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>OpenSIPS</title>
-        <link>https://www.dxx.plus/tags/opensips/</link>
-        <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/opensips/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Sip</title>
-        <link>https://www.dxx.plus/tags/sip/</link>
-        <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/sip/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Wed, 05 Jul 2023 11:28:13 +0800</lastBuildDate><atom:link href="https://www.dxx.plus/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux</title>
         <link>https://www.dxx.plus/tags/linux/</link>
         <pubDate>Wed, 05 Jul 2023 11:28:13 +0800</pubDate>
         
         <guid>https://www.dxx.plus/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SIP</title>
+        <link>https://www.dxx.plus/tags/sip/</link>
+        <pubDate>Sun, 25 Jun 2023 16:50:00 +0800</pubDate>
+        
+        <guid>https://www.dxx.plus/tags/sip/</guid>
         <description></description>
         </item>
         <item>
@@ -72,27 +48,19 @@
         <description></description>
         </item>
         <item>
-        <title>Phone</title>
-        <link>https://www.dxx.plus/tags/phone/</link>
-        <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/phone/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Python</title>
-        <link>https://www.dxx.plus/tags/python/</link>
-        <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.dxx.plus/tags/python/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>杂谈</title>
         <link>https://www.dxx.plus/tags/%E6%9D%82%E8%B0%88/</link>
         <pubDate>Mon, 03 Apr 2023 19:54:00 +0800</pubDate>
         
         <guid>https://www.dxx.plus/tags/%E6%9D%82%E8%B0%88/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://www.dxx.plus/tags/python/</link>
+        <pubDate>Fri, 31 Mar 2023 15:10:48 +0800</pubDate>
+        
+        <guid>https://www.dxx.plus/tags/python/</guid>
         <description></description>
         </item>
         <item>

@@ -14,16 +14,20 @@
         
         <guid>https://www.dxx.plus/p/tznvqq_bh/</guid>
         <description>&lt;p&gt;转载自：https://blog.csdn.net/momoringmok/article/details/105013079&lt;/p&gt;
-&lt;h3 id=&#34;1用ls--i-命令找到文件或目录的-inode&#34;&gt;1.用ls -i 命令找到文件或目录的 inode
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://www.dxx.plus/post-images/1688527815995.png&#34;
-	
-	
-	
+&lt;h3 id=&#34;1-使用-ls--i-命令找到文件或目录的-inode&#34;&gt;1. 使用 &lt;code&gt;ls -i&lt;/code&gt; 命令找到文件或目录的 inode
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://www.dxx.plus/p/tznvqq_bh/9262c4ea782942dcb8ebd41087669518.png&#34;
+	width=&#34;720&#34;
+	height=&#34;405&#34;
+	srcset=&#34;https://www.dxx.plus/p/tznvqq_bh/9262c4ea782942dcb8ebd41087669518_hu_733338a44306ef05.png 480w, https://www.dxx.plus/p/tznvqq_bh/9262c4ea782942dcb8ebd41087669518_hu_3ac0ce57fc48f331.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;2删除文件&#34;&gt;2.删除文件：
+&lt;h3 id=&#34;2-删除文件&#34;&gt;2. 删除文件
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -32,13 +36,13 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; find -inum &lt;span class=&#34;m&#34;&gt;1182336&lt;/span&gt; -delete
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; find -inum &lt;span class=&#34;m&#34;&gt;1182338&lt;/span&gt; -delete
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; find -inum &lt;span class=&#34;m&#34;&gt;1182337&lt;/span&gt; -delete
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; find -inum &lt;span class=&#34;m&#34;&gt;1182340&lt;/span&gt; -delete
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find -inum &lt;span class=&#34;m&#34;&gt;1182336&lt;/span&gt; -delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find -inum &lt;span class=&#34;m&#34;&gt;1182338&lt;/span&gt; -delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find -inum &lt;span class=&#34;m&#34;&gt;1182337&lt;/span&gt; -delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find -inum &lt;span class=&#34;m&#34;&gt;1182340&lt;/span&gt; -delete
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;3删除目录会提示-no-such-file-or-directory&#34;&gt;3.删除目录(会提示 No such file or directory):
+&lt;/div&gt;&lt;h3 id=&#34;3-删除目录可能提示-no-such-file-or-directory&#34;&gt;3. 删除目录（可能提示 No such file or directory）
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
